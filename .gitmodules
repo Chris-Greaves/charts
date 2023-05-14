@@ -1,0 +1,3 @@
+[submodule "charts/stable/planka-helm-chart"]
+	path = charts/stable/planka-helm-chart
+	url = https://github.com/Chris-Greaves/planka-helm-chart.git
