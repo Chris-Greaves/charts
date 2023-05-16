@@ -29,13 +29,21 @@ jobs:
 
       - name: Add repositories
         run: |
-          for dir in $(ls -d charts/stable/*/); do
+          for dir in $(ls -d charts/*/*/); do
             helm dependency list $dir 2> /dev/null | tail +2 | head -n -1 | awk '{ print "helm repo add " $1 " " $3 }' | while read cmd; do $cmd; done
           done
 
-      - name: Run chart-releaser
+      - name: Run chart-releaser for stable
         uses: helm/chart-releaser-action@v1.5.0
         with:
           charts_dir: charts/stable
         env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Run chart-releaser for incubator
+        uses: helm/chart-releaser-action@v1.5.0
+        with:
+          charts_dir: charts/incubator
+        env:
+          CR_PAGES_INDEX_PATH: incubator/index.yaml
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

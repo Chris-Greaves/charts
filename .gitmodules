@@ -1,3 +1,6 @@
 [submodule "charts/stable/planka-helm-chart"]
 	path = charts/stable/planka-helm-chart
 	url = https://github.com/Chris-Greaves/planka-helm-chart.git
+[submodule "charts/incubator/filestash-helm-chart"]
+	path = charts/incubator/filestash-helm-chart
+	url = https://github.com/Chris-Greaves/filestash-helm-chart.git
