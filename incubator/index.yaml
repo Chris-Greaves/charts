@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  filestash:
+  - apiVersion: v2
+    appVersion: arm
+    created: "2023-05-16T02:42:40.724970306Z"
+    description: A Helm chart for Kubernetes
+    digest: 2c8a823d85b4bf44b4e872c1e26cf346f1a4e1b0268792f55b7eeb6261aa296b
+    name: filestash
+    type: application
+    urls:
+    - https://github.com/Chris-Greaves/charts/releases/download/filestash-0.1.1/filestash-0.1.1.tgz
+    version: 0.1.1
   planka:
   - apiVersion: v2
     appVersion: 1.11.0
@@ -17,4 +28,4 @@ entries:
     urls:
     - https://github.com/Chris-Greaves/charts/releases/download/planka-0.1.0/planka-0.1.0.tgz
     version: 0.1.0
-generated: "2023-05-15T02:04:07.037831777Z"
+generated: "2023-05-16T02:42:40.724978806Z"
